@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rarriola <rarriola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/08 20:54:50 by marvin            #+#    #+#             */
-/*   Updated: 2025/12/09 11:20:02 by rarriola         ###   ########.fr       */
+/*   Created: 2025/12/09 10:47:58 by rarriola          #+#    #+#             */
+/*   Updated: 2025/12/09 12:05:44 by rarriola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	find_newline(char *str)
 {
@@ -78,38 +78,26 @@ static char	*read_buffer(int fd, char *buffer)
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer;
+	static char	*buffer[MAX_FILES];
 	char		*temp;
 	char		*line;
 	int			pos;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= MAX_FILES)
 		return (NULL);
-	buffer = read_buffer(fd, buffer);
-	if (!buffer)
+	buffer[fd] = read_buffer(fd, buffer[fd]);
+	if (!buffer[fd])
 		return (NULL);
-	if (find_newline(buffer) == -1)
+	if (find_newline(buffer[fd]) == -1)
 	{
-		temp = buffer;
-		buffer = NULL;
+		temp = buffer[fd];
+		buffer[fd] = NULL;
 		return (temp);
 	}
-	pos = find_newline(buffer);
-	line = get_line(buffer, pos);
-	temp = get_rest(buffer, pos);
-	free(buffer);
-	buffer = temp;
+	pos = find_newline(buffer[fd]);
+	line = get_line(buffer[fd], pos);
+	temp = get_rest(buffer[fd], pos);
+	free(buffer[fd]);
+	buffer[fd] = temp;
 	return (line);
 }
-/* int main()
-{
-	int	fd;
-	fd = open("gnlrd.txt", O_RDONLY);
-	for (size_t i = 0; i < 5; i++)
-	{
-		char *str = get_next_line(fd);
-		printf("%s\n",str);
-		free(str);
-	}
-	close(fd);
-} */

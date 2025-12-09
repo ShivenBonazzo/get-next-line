@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rarriola <rarriola@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/08 20:50:12 by marvin            #+#    #+#             */
-/*   Updated: 2025/12/09 10:41:43 by rarriola         ###   ########.fr       */
+/*   Created: 2025/12/09 10:48:04 by rarriola          #+#    #+#             */
+/*   Updated: 2025/12/09 12:05:44 by rarriola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
@@ -21,6 +21,8 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdio.h>
+
+# define MAX_FILES 10000
 
 char	*get_next_line(int fd);
 int		ft_strlen(char *str);
