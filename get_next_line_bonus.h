@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rarriola <rarriola@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvinbobw.co <marvinbobw.co@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 10:48:04 by rarriola          #+#    #+#             */
-/*   Updated: 2025/12/09 12:05:44 by rarriola         ###   ########.fr       */
+/*   Updated: 2025/12/11 15:50:10 by marvinbobw.      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
-# include <stdio.h>
 
 # define MAX_FILES 10000
 

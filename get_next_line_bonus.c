@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rarriola <rarriola@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvinbobw.co <marvinbobw.co@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 10:47:58 by rarriola          #+#    #+#             */
-/*   Updated: 2025/12/09 12:05:44 by rarriola         ###   ########.fr       */
+/*   Updated: 2025/12/11 15:50:12 by marvinbobw.      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

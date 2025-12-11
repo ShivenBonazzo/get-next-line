@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rarriola <rarriola@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvinbobw.co <marvinbobw.co@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 10:48:08 by rarriola          #+#    #+#             */
-/*   Updated: 2025/12/09 11:38:46 by rarriola         ###   ########.fr       */
+/*   Updated: 2025/12/11 16:02:31 by marvinbobw.      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,10 @@ char	*ft_strjoin(char *s1, char *s2)
 		return (ft_strcpy(s1));
 	new = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!new)
+	{
+		free(s1);
 		return (NULL);
+	}
 	i = -1;
 	while (s1[++i])
 		new[i] = s1[i];

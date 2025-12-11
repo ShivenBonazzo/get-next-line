@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rarriola <rarriola@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvinbobw.co <marvinbobw.co@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 20:50:12 by marvin            #+#    #+#             */
-/*   Updated: 2025/12/09 10:41:43 by rarriola         ###   ########.fr       */
+/*   Updated: 2025/12/11 15:50:01 by marvinbobw.      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
-# include <stdio.h>
 
 char	*get_next_line(int fd);
 int		ft_strlen(char *str);
